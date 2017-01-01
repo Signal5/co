@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Visszaszámlálás</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+<div id="wrapper">
+	<section>
+		<table class="keret">
+			<tr class="info">
+				<td id="days" style="width:23%;">120</td>
+				<td id="hours" style="width:30%;">4</td>
+				<td id="minutes" style="width:22%;">12</td>
+				<td id="seconds" style="width:22%;">22</td>
+			</tr>
+			<tr>
+				<td class="idon">Nap</td>
+				<td class="idon">Óra</td>
+				<td class="idon">Perc</td>
+				<td class="idon">Másodperc</td>
+			</tr>
+		</table>
+
+		<script type="text/javascript">
+
+			function countdown(){
+				var now = new Date();
+				var eventDate = new Date(2016, 11, 25);
+
+				var currentTiime = now.getTime();
+				var eventTime = eventDate.getTime();
+
+				var remTime = eventTime - currentTiime;
+
+				var s = Math.floor(remTime / 1000);
+				var m = Math.floor(s / 60);
+				var h = Math.floor(m / 60);
+				var d = Math.floor(h / 24);
+
+				h %= 24;
+				m %= 60;
+				s %= 60;
+
+			/*	h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;*/
+				
+				d = (d < 10) ? "0" : d;
+				h = (h < 10) ? "0" : h;
+				m = (m < 10) ? "0" : m;
+				s = (s < 10) ? "0" : s;
+				
+				document.getElementById("days").textContent = d;
+				document.getElementById("days").innerText = d;
+
+				document.getElementById("hours").textContent = h;
+				document.getElementById("minutes").textContent = m;
+				document.getElementById("seconds").textContent = s;
+
+				setTimeout(countdown, 1000);
+				
+						
+			}
+
+			countdown();
+		</script>
+	</section>
+</div>
+</body>
+</html>

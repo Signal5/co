@@ -1,0 +1,75 @@
+* { padding: 0; margin: 0; border: 0 }
+
+body {
+	background: url('a.png') #fff;
+	background-size: 100% 700px;
+	background-repeat: no-repeat;
+	font-family: arial ;
+	font-size: 150%;
+	font-weight: bold;
+	color: #617F3C;
+}
+
+
+.keret{
+	position: absolute;
+	/*top: 25%;*/
+	left: 50%;
+	width: 83%;
+	transform : translateX(-50%) translateY(75%);
+	text-align: center;
+	padding: 10px;
+	}
+
+.info {
+	font-size: 550%;
+	text-shadow: 2px 2px 2px #363445;
+	}
+.idon{
+color:#363445;
+}}
+	
+div#wrapper {
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+section {
+	width: 558px;
+	float: left;
+	margin: 0 20px 0 0;
+	padding: 0 20px 0 0;
+	font-size: 80%;
+	
+}
+
+
+@media only screen
+and (min-width : 480px)
+and (max-width : 800px) {
+	div#wrapper { width: 600px; }
+	section { width: 408px }
+	body{font-size:100%; background-size: 100% 600px; background-repeat: no-repeat;}
+	.keret{transform : translateX(-50%) translateY(100%);}
+	.idon{font-size: 140%;}
+}
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+	div#wrapper { width: 400px; }
+	section { width: 400px; padding: 0; margin: 0; border: 0;}
+	body{font-size:80%; background-size: 100% 500px; background-repeat: no-repeat;}
+	.keret{transform : translateX(-50%) translateY(100%);}
+	.idon{font-size: 140%;}
+}
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px) {
+	div#wrapper { width: 300px; }
+	section { width: 300px; padding: 0; margin: 0; border: 0; }
+	body{font-size:60%; background-size: 100% 500px; background-repeat: no-repeat;}
+	.keret{transform : translateX(-50%) translateY(150%);}
+	.idon{font-size: 155%;}
+}
+
